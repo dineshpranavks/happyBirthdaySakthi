@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Wish For You! 🎥💖</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Specific styles for video page */
+        #video-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        video {
+            width: 100%;
+            display: block;
+            border-radius: 20px;
+        }
+
+        .back-btn {
+            margin-top: 30px;
+            display: inline-block;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="background-elements">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="floating-heart">❤️</div>
+        <div class="floating-heart" style="left: 20%; animation-duration: 8s;">💖</div>
+        <div class="floating-heart" style="left: 80%; animation-duration: 12s;">💝</div>
+    </div>
+
+    <main class="container">
+
+        <section class="glass-panel">
+            <!-- <h1 class="glow-text">Happy Birthday! 🎂</h1>
+            <p class="subtitle">Here's a little something for you...</p> -->
+
+            <div id="video-container">
+                <!-- Replace 'your-video.mp4' with your actual video file -->
+                <video id="birthdayVideo" controls>
+                    <source src="your-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <a href="main.html" class="cta-btn back-btn">Go Back 🏠</a>
+        </section>
+
+    </main>
+
+    <!-- Music Player -->
+    <!-- <div class="music-player">
+        <button id="musicToggle" class="music-btn">
+            <i class="fas fa-play"></i> <span>Play Song</span>
+        </button>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="Naan Un.mp3" type="audio/mpeg">
+    </audio> -->
+
+    <script src="video.js"></script>
+</body>
+
+</html>

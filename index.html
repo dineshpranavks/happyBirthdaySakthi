@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a Wish! 🎂</title>
+    <link rel="stylesheet" href="landing.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&family=Pacifico&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Step 1: Countdown (Auto Start) -->
+        <div id="countdown" class="overlay">
+            <span id="countdown-number">5</span>
+        </div>
+
+        <!-- Step 2: Cake Section -->
+        <div id="cake-section" class="hidden">
+            <h2 id="blow-text">Blow the candles in... <span id="blow-timer">5</span></h2>
+
+            <div class="cake-container">
+                <div class="cake">
+                    <div class="plate"></div>
+                    <div class="layer layer-bottom"></div>
+                    <div class="layer layer-middle"></div>
+                    <div class="layer layer-top"></div>
+
+                    <!-- Just use icing div for top visual -->
+                    <div class="icing"></div>
+                    <div class="drip drip1"></div>
+                    <div class="drip drip2"></div>
+                    <div class="drip drip3"></div>
+                    <div class="drip drip4"></div>
+                    <div class="drip drip5"></div>
+
+                    <div class="candle">
+                        <div class="flame"></div>
+                    </div>
+                </div>
+            </div>
+
+            <button id="enter-btn" class="hidden">Indha Pakkam 😁</button>
+        </div>
+    </div>
+
+    <!-- Hidden audio for auto-play attempt -->
+    <audio id="intro-music" loop autoplay>
+        <source src="Naan Un.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="landing.js"></script>
+</body>
+
+</html>

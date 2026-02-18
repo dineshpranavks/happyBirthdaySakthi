@@ -1,0 +1,353 @@
+body {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    color: white;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 20;
+}
+
+.hidden {
+    display: none;
+    opacity: 0;
+}
+
+h1,
+h2 {
+    font-family: 'Pacifico', cursive;
+    color: #f0f0f0;
+    margin-bottom: 50px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+button {
+    padding: 15px 40px;
+    font-size: 1.5rem;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+    margin-top: 50px;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* Countdown */
+#countdown-number {
+    font-size: 10rem;
+    font-weight: bold;
+    color: #f1c40f;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* --- FAZLURR CAKE CSS RECREATION --- */
+/* Core Concept: box-shadow + pseudo elements for 3D */
+
+.cake-container {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.cake {
+    position: absolute;
+    width: 250px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.plate {
+    width: 270px;
+    height: 110px;
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    box-shadow:
+        0 2px 0 #b3b3b3,
+        0 4px 0 #b3b3b3,
+        0 5px 40px rgba(0, 0, 0, 0.5);
+}
+
+.cake>* {
+    position: absolute;
+}
+
+/* The Cake Body (Cylinder) */
+.layer {
+    position: absolute;
+    display: block;
+    width: 250px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #553c13;
+    /* Dark Chocolate */
+    box-shadow:
+        0 2px 0px #6A4B18,
+        0 4px 0px #33240b,
+        0 6px 0px #32230b,
+        0 8px 0px #31230b,
+        0 10px 0px #30220b,
+        0 12px 0px #2f220b,
+        0 14px 0px #2f220b,
+        0 16px 0px #2e210b,
+        0 18px 0px #2d210b,
+        0 20px 0px #2c200b,
+        0 22px 0px #2b1f0a,
+        0 24px 0px #2a1f0a,
+        0 26px 0px #2a1e09,
+        0 28px 0px #291e09,
+        0 30px 0px #281d09;
+}
+
+.layer-top {
+    top: 0px;
+    z-index: 10;
+
+    /* Cream Top Surface */
+    background: #f0e4d0;
+}
+
+.layer-middle {
+    top: 33px;
+    z-index: 9;
+    box-shadow:
+        0 2px 0px #4d3611,
+        0 4px 0px #33240b,
+        0 6px 0px #32230b,
+        0 8px 0px #31230b,
+        0 10px 0px #30220b,
+        0 12px 0px #2f220b,
+        0 14px 0px #2f220b,
+        0 16px 0px #2e210b,
+        0 18px 0px #2d210b,
+        0 20px 0px #2c200b,
+        0 22px 0px #2b1f0a,
+        0 24px 0px #2a1f0a,
+        0 26px 0px #2a1e09,
+        0 28px 0px #291e09,
+        0 30px 0px #281d09;
+}
+
+.layer-bottom {
+    top: 66px;
+    z-index: 8;
+    box-shadow:
+        0 2px 0px #4d3611,
+        0 4px 0px #33240b,
+        0 6px 0px #32230b,
+        0 8px 0px #31230b,
+        0 10px 0px #30220b,
+        0 12px 0px #2f220b,
+        0 14px 0px #2f220b,
+        0 16px 0px #2e210b,
+        0 18px 0px #2d210b,
+        0 20px 0px #2c200b,
+        0 22px 0px #2b1f0a,
+        0 24px 0px #2a1f0a,
+        0 26px 0px #2a1e09,
+        0 28px 0px #291e09,
+        0 30px 0px #281d09;
+}
+
+/* Drip Icing */
+.icing {
+    position: absolute;
+    top: 2px;
+    /* Place on top layer */
+    left: 5px;
+    background-color: #f0e4d0;
+    width: 240px;
+    height: 90px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+/* Drips - Pseudo Elements */
+.icing:before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 5px;
+    bottom: 6px;
+    left: 5px;
+    background-color: #f0e4d0;
+    /* Match icing */
+    box-shadow:
+        0 0 4px #f5ebd9,
+        0 0 4px #f5ebd9,
+        0 0 20px #f5ebd9;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Manual Drips */
+.drip {
+    display: block;
+    width: 50px;
+    height: 60px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: #f0e4d0;
+    position: absolute;
+    top: 50px;
+    /* Attach to icing edge */
+    z-index: 11;
+}
+
+.drip1 {
+    left: 5px;
+    height: 50px;
+    width: 40px;
+}
+
+.drip2 {
+    left: 45px;
+    height: 75px;
+    width: 40px;
+}
+
+.drip3 {
+    left: 85px;
+    height: 55px;
+    width: 40px;
+}
+
+.drip4 {
+    left: 125px;
+    height: 70px;
+    width: 40px;
+}
+
+.drip5 {
+    left: 165px;
+    height: 45px;
+    width: 40px;
+}
+
+/* Candle Code */
+.candle {
+    background-color: #7B020B;
+    width: 16px;
+    height: 50px;
+    border-radius: 8px / 4px;
+    top: -20px;
+    left: 50%;
+    margin-left: -8px;
+    z-index: 20;
+}
+
+.candle:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ad030f;
+}
+
+.flame {
+    position: absolute;
+    background-color: orange;
+    width: 15px;
+    height: 35px;
+    border-radius: 10px 10px 10px 10px / 25px 25px 10px 10px;
+    top: -34px;
+    left: 50%;
+    margin-left: -7.5px;
+    z-index: 20;
+    box-shadow:
+        0 0 10px rgba(255, 165, 0, 0.5),
+        0 0 20px rgba(255, 165, 0, 0.5),
+        0 0 60px rgba(255, 165, 0, 0.5),
+        0 0 80px rgba(255, 165, 0, 0.5);
+    transform-origin: 50% 90%;
+    animation: flicker 1s ease-in-out alternate infinite;
+}
+
+@keyframes flicker {
+    0% {
+        transform: skewX(5deg);
+        box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
+    }
+
+    25% {
+        transform: skewX(-5deg);
+        box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
+    }
+
+    50% {
+        transform: skewX(10deg);
+        box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
+    }
+
+    75% {
+        transform: skewX(-10deg);
+        box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
+    }
+
+    100% {
+        transform: skewX(5deg);
+        box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
+    }
+}
+
+.flame-out {
+    animation: puff-out 0.5s forwards;
+}
+
+@keyframes puff-out {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.1) translateY(-20px);
+    }
+}
